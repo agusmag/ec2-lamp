@@ -1,0 +1,6 @@
+---
+# handlers file for php
+- name: restart Apache #El nombre debe ser el mismo que se indico en el main.yml de tasks
+  service:
+    name: httpd
+    state: restarted

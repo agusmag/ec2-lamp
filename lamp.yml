@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes #Permite usar sudo en la instancia
+#  tasks:
+#    - name: Install Apache2 web server #Descripción del comando que se va a ejecutar
+#      yum:
+#        name: httpd
+#        state: present #Que va a hacer yum con esto, puede ser absent, si ya existe no instala nada.
+#    - name: Ensure that Apache is up and running and will autostart on system boot
+#     service: 
+#        name: httpd
+#        state: started #Puede ser Stopped o Restarted, si ya está iniciado no hace nada.
+#        enabled: true
+  roles: #No es necesario agregar todas las tareas, con roles que hagan las mismas tareas es más limpio y claro.
+    - apache
+    - php
